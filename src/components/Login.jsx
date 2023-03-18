@@ -1,7 +1,11 @@
 import { useState } from "react";
+// icons
 import { IconMail, IconPassword } from "./icons/svg-login";
 import { IconBack, IconText, IconShow, IconHide, IconHideConfirm, IconShowConfirm } from "./icons/svg-registerUser";
-import { blurFieldID, focusFieldID, focusFieldPass, blurFieldPass } from "./functions/input-focus";
+// functions
+import { blurFieldID, focusFieldID, focusFieldPass, blurFieldPass } from "./functions/inputLogin";
+
+import { inputNameKeyUp, inputNameFocusIn, inputNameBlur, inputNumberFocusIn, inputNumberBlur, inputNumberKeyUp, inputPassFocusIn, inputPassBlur, showPassRegister, inputConfirmPassFocusIn, inputConfirmPassBlur, inputConfirmPassKeyUp, showConfirmRegister } from "./functions/inputRegister";
 
 
 const Login = () => {
@@ -53,23 +57,22 @@ const Login = () => {
               <h4 className="header-input-h4">Nombre</h4>
               <IconText />
             </div>
-
-            <input autoComplete="username" placeholder="Ingresa tu nombre completo" className="registerUser-form-name" />
+            <input onBlur={inputNameBlur} onKeyUp={inputNameKeyUp} onFocus={inputNameFocusIn} autoComplete="off" placeholder="Ingresa tu nombre completo" className="registerUser-form-name" />
             <p className="registerUser-form-name-p"> </p>
 
             <div className="wrapper-header-input">
               <h4 className="header-input-h4">Número de teléfono</h4>
               <p className="header-input-number-p">123</p>
             </div>
-            <input autoComplete="username" placeholder="Ingresa tu número celular" className="registerUser-form-id" />
+            <input onBlur={inputNumberBlur} onKeyUp={inputNumberKeyUp} onFocus={inputNumberFocusIn} autoComplete="off" placeholder="Ingresa tu número celular" className="registerUser-form-id" />
             <p className="registerUser-form-id-p"></p>
 
             <div className="wrapper-header-input">
               <h4 className="header-input-h4">Contraseña</h4>
             </div>
             <div className="wrapper-password">
-              <input autoComplete="new-password" type="password" className="registerUser-form-pass" placeholder="Crea una contraseña" />
-              <button className="btn-showPass" type="button">
+              <input onBlur={inputPassBlur} onFocus={inputPassFocusIn} autoComplete="new-password" type="password" className="registerUser-form-pass" placeholder="Crea una contraseña" />
+              <button onClick={showPassRegister} className="btn-showPass" type="button">
                 <IconShow />
                 <IconHide />
               </button>
@@ -86,8 +89,8 @@ const Login = () => {
               <h4 className="header-input-h4">Confirmar contraseña</h4>
             </div>
             <div className="wrapper-password">
-              <input autoComplete="new-password" type="password" className="registerUser-form-passConfirm" placeholder="Repite la contraseña" />
-              <button className="btn-showPassConfirm" type="button">
+              <input onKeyUp={inputConfirmPassKeyUp} onFocus={inputConfirmPassFocusIn} onBlur={inputConfirmPassBlur} autoComplete="new-password" type="password" className="registerUser-form-passConfirm" placeholder="Repite la contraseña" />
+              <button onClick={showConfirmRegister} className="btn-showPassConfirm" type="button">
                 <IconShowConfirm />
                 <IconHideConfirm />
               </button>
