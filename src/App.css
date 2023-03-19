@@ -67,9 +67,14 @@ input[type="checkbox"] {
   background-color: var(--mainColor);
 }
 
+.logo-img {
+  height: 5rem;
+  padding-bottom: 8px;
+}
 
 .login {
-  padding: 2rem;
+  width: 20rem;
+  padding: 2rem 1.7rem;
   border-radius: 16px;
   display: flex;
   flex-direction: column;
@@ -78,14 +83,14 @@ input[type="checkbox"] {
 }
 
 .login-title-h1 {
-  font-size: 32px;
+  font-size: 38px;
   letter-spacing: -.8px;
   font-weight: 800;
 }
 
 .wrapper-field {
   height: 12rem;
-  margin-top: 12px;
+  width: 95%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -142,7 +147,6 @@ input[type="checkbox"] {
   min-height: 2.6rem;
   width: 100%;
   margin-top: 1rem;
-  /* padding: 6px 96px; */
   border-radius: 100px;
   font-size: 16px;
   border: none;
@@ -156,84 +160,17 @@ input[type="checkbox"] {
   background-color: #334e7d;
 }
 
-/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
-
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-  -webkit-backdrop-filter: blur(5px);
-  backdrop-filter: blur(5px);
-  z-index: 5;
-}
-
-/* modal */
-.modal-wrongMessage,
-.modal-doneMessage,
-.modal-doneLogin {
-  min-height: 9rem;
-  width: 19rem;
-  padding: 1rem 18px;
-  border-radius: 12px;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 10;
-  text-align: center;
-  background-color: white;
-  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
-}
-
-.modal-wrongMessage-h2,
-.modal-doneMessage-h2,
-.modal-doneLogin-h2 {
-  margin-top: .5rem;
-  color: #f63737;
-}
-
-.modal-doneMessage-h2 {
-  letter-spacing: -.5px;
-  color: var(--mainColor);
-}
-
-.modal-wrongMessage-p,
-.modal-doneMessage-p,
-.modal-doneLogin-p {
-  margin-top: 8px;
-  padding: 8px 7px;
-  border-radius: 8px;
-  line-height: 1.5;
-  border: 1px solid #abaaaa;
-  background-color: #f2f2f7;
-}
-
-.modal-wrongMessage-btn,
-.modal-doneMessage-btn,
-.modal-doneLogin-btn {
+.btn__toggle__accOrReg {
   margin-top: 1rem;
-  width: 100%;
-  padding: 8px 0;
-  border-radius: 8px;
-  font-size: 16px;
-  font-weight: 400;
-  outline: none;
+  font-size: 14px;
+  font-weight: 500;
   border: none;
-  color: var(--white);
-  background-color: #f63737;
+  background-color: #fff;
 }
 
-.modal-doneMessage-btn,
-.modal-doneLogin-btn {
-  background-color: var(--mainColor);
-}
-
-.modal-wrongMessage-btn:hover {
+.btn__toggle__accOrReg:hover {
   cursor: pointer;
-  background-color: #de3333;
+  font-weight: 600;
 }
 
 /* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
@@ -246,7 +183,7 @@ input[type="checkbox"] {
 }
 
 .registerUser {
-  height: 36rem;
+  height: 35rem;
   width: 20rem;
   padding: 6px 1rem 8px 1rem;
   border-radius: 32px;
@@ -271,6 +208,7 @@ input[type="checkbox"] {
 
 .btn-backLogin:hover {
   cursor: pointer;
+  font-weight: 600;
   color: #3c5c92;
 }
 
@@ -285,15 +223,14 @@ input[type="checkbox"] {
   letter-spacing: -.8px;
 }
 
+/* form */
 .registerUser-form {
   width: 90%;
   padding-bottom: 1rem;
-  margin-top: 1.2rem;
+  margin-top: .8rem;
   display: grid;
   gap: 6px
 }
-
-
 
 .wrapper-header-input {
   width: 100%;
@@ -414,11 +351,8 @@ input[type="checkbox"] {
   font-size: 13px;
 }
 
-
-
-
 .btn-registerUser {
-  min-height: 3rem;
+  min-height: 2.5rem;
   margin-top: 12px;
   border-radius: 100px;
   font-size: 16px;
@@ -426,14 +360,95 @@ input[type="checkbox"] {
   outline: none;
   color: var(--white);
   background-color: #2e466f;
-  box-shadow: 0px 8px 10px rgba(35, 57, 81, 0.2);
+  box-shadow: 0px 10px 10px -7px rgba(35, 57, 81, 0.2);
 }
 
 .btn-registerUser:hover {
-  box-shadow: 0px 8px 10px rgba(35, 57, 81, 0.25);
+  cursor: pointer;
+  background-color: #2b4167;
+  box-shadow: 0px 10px 10px -7px rgba(35, 57, 81, 0.25);
 }
 
-/* tools */
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  z-index: 5;
+}
+
+/* modal */
+.modal-wrongMessage,
+.modal-doneMessage,
+.modal-doneLogin {
+  min-height: 9rem;
+  width: 19rem;
+  padding: 1rem 18px;
+  border-radius: 12px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  text-align: center;
+  background-color: white;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+}
+
+.modal-wrongMessage-h2,
+.modal-doneMessage-h2,
+.modal-doneLogin-h2 {
+  margin-top: .5rem;
+  color: #f63737;
+}
+
+.modal-doneMessage-h2 {
+  letter-spacing: -.5px;
+  color: var(--mainColor);
+}
+
+.modal-wrongMessage-p,
+.modal-doneMessage-p,
+.modal-doneLogin-p {
+  margin-top: 8px;
+  padding: 8px 7px;
+  border-radius: 8px;
+  line-height: 1.5;
+  border: 1px solid #abaaaa;
+  background-color: #f2f2f7;
+}
+
+.modal-wrongMessage-btn,
+.modal-doneMessage-btn,
+.modal-doneLogin-btn {
+  margin-top: 1rem;
+  width: 100%;
+  padding: 8px 0;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 400;
+  outline: none;
+  border: none;
+  color: var(--white);
+  background-color: #f63737;
+}
+
+.modal-doneMessage-btn,
+.modal-doneLogin-btn {
+  background-color: var(--mainColor);
+}
+
+.modal-wrongMessage-btn:hover {
+  cursor: pointer;
+  background-color: #de3333;
+}
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 .hidden {
   display: none;
 }

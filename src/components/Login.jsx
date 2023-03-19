@@ -4,19 +4,22 @@ import { IconMail, IconPassword } from "./icons/svg-login";
 import { IconBack, IconText, IconShow, IconHide, IconHideConfirm, IconShowConfirm } from "./icons/svg-registerUser";
 // functions
 import { blurFieldID, focusFieldID, focusFieldPass, blurFieldPass } from "./functions/inputLogin";
-
 import { inputNameKeyUp, inputNameFocusIn, inputNameBlur, inputNumberFocusIn, inputNumberBlur, inputNumberKeyUp, inputPassFocusIn, inputPassBlur, showPassRegister, inputConfirmPassFocusIn, inputConfirmPassBlur, inputConfirmPassKeyUp, showConfirmRegister } from "./functions/inputRegister";
-
+import reviewRegister from "./functions/buttonRegister";
 
 const Login = () => {
 
   const [isRegistering, setIsRegistering] = useState(false);
 
-  if (isRegistering) {
+  if (!isRegistering) {
     return (
       <main className="container-login">
         <div className="login">
+
+          <img className="logo-img" src="login.svg" alt="ilustration person opening a door" />
+
           <h1 className="login-title-h1">Inicia Sesión</h1>
+
           <form className="wrapper-field">
             <p>Identificador</p>
             <div className="field-id">
@@ -33,10 +36,13 @@ const Login = () => {
           </form>
 
           <button className="btn-logIn" type="button">Ingresar</button>
+
           <button className="btn__toggle__accOrReg" onClick={() => {
             setIsRegistering(!isRegistering);
-          }} >¿No tienes una cuenta? Regístrate'</button>
+          }}>¿No tienes una cuenta? Regístrate
+          </button>
         </div>
+
       </main>
     );
   } else {
@@ -72,7 +78,7 @@ const Login = () => {
             </div>
             <div className="wrapper-password">
               <input onBlur={inputPassBlur} onFocus={inputPassFocusIn} autoComplete="new-password" type="password" className="registerUser-form-pass" placeholder="Crea una contraseña" />
-              <button onClick={showPassRegister} className="btn-showPass" type="button">
+              <button onClick={showPassRegister} className="btn-showPass" type="button" title="button show">
                 <IconShow />
                 <IconHide />
               </button>
@@ -90,20 +96,25 @@ const Login = () => {
             </div>
             <div className="wrapper-password">
               <input onKeyUp={inputConfirmPassKeyUp} onFocus={inputConfirmPassFocusIn} onBlur={inputConfirmPassBlur} autoComplete="new-password" type="password" className="registerUser-form-passConfirm" placeholder="Repite la contraseña" />
-              <button onClick={showConfirmRegister} className="btn-showPassConfirm" type="button">
+              <button onClick={showConfirmRegister} className="btn-showPassConfirm" type="button" title="button show">
                 <IconShowConfirm />
                 <IconHideConfirm />
               </button>
             </div>
             <p className="registerUser-form-passConfirm-p"></p>
 
-            <button className="btn-registerUser" type="button" name="button to Register">Registrarme Ahora</button>
+            <button onClick={() => {
+              reviewRegister();
+              if (reviewRegister) {
+                setIsRegistering(!isRegistering);
+              }
+            }} className="btn-registerUser" type="button" name="button to Register">Registrarme Ahora</button>
           </form>
         </div>
       </section>
     );
-  } // else
+  }
 
-}; // component
+};
 
-export default Login;;;;;
+export default Login;
