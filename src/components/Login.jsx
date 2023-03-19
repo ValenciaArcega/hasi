@@ -4,7 +4,7 @@ import SignIn from "./containers/SignIn";
 import SignUp from "./containers/SignUp";
 import MsgDoneRegister from "./messages/msg-done";
 
-const Login = () => {
+const Login = ({ updateLog }) => {
 
   const [isRegistering, setIsRegistering] = useState(false);
   const [gotRegister, setGotRegister] = useState(false);
@@ -13,7 +13,7 @@ const Login = () => {
     return (
       <>
         {gotRegister ? <MsgDoneRegister /> : false}
-        <SignIn isRegistering={isRegistering} setIsRegistering={setIsRegistering} />
+        <SignIn isRegistering={isRegistering} setIsRegistering={setIsRegistering} updateLog={updateLog} />
       </>
     );
   } else {

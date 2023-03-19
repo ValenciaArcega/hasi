@@ -1,7 +1,11 @@
 import { IconMail, IconPassword } from "../icons/svg-login";
 import { blurFieldID, focusFieldID, focusFieldPass, blurFieldPass } from "../functions/inputLogin";
 
-const SignIn = ({ isRegistering, setIsRegistering }) => {
+const SignIn = ({ updateLog, isRegistering, setIsRegistering }) => {
+
+  const handleClick = () => {
+    updateLog(true);
+  };
   return (
     <main className="container-login">
       <div className="login">
@@ -25,14 +29,13 @@ const SignIn = ({ isRegistering, setIsRegistering }) => {
           </div>
         </form>
 
-        <button className="btn-logIn" type="button">Ingresar</button>
+        <button onClick={handleClick} className="btn-logIn" type="button">Ingresar</button>
 
         <button className="btn__toggle__accOrReg" onClick={() => {
           setIsRegistering(!isRegistering);
         }}>¿No tienes una cuenta? Regístrate
         </button>
       </div>
-
     </main>
   );
 };
