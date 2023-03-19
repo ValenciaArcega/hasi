@@ -1,6 +1,9 @@
 import users from "../../data/users";
 
 const reviewRegister = () => {
+
+  let reviewed = false;
+
   const inputName = document.querySelector('.registerUser-form-name');
   const inputID = document.querySelector('.registerUser-form-id');
   const inputPass = document.querySelector('.registerUser-form-pass');
@@ -9,7 +12,6 @@ const reviewRegister = () => {
   const textErrorName = document.querySelector('.registerUser-form-name-p');
   const textErrorID = document.querySelector('.registerUser-form-id-p');
   const textErrorPassConfirm = document.querySelector('.registerUser-form-passConfirm-p');
-
 
   let root = document.querySelector(':root');
   let resultName = false;
@@ -52,9 +54,11 @@ const reviewRegister = () => {
     resultID = false;
     resultPass = false;
     resultName = false;
+
+    return reviewed = true;
   }
 
-  return true;
+  return reviewed;
 };
 
 export default reviewRegister;
