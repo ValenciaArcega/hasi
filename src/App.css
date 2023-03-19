@@ -76,7 +76,7 @@ input[type="checkbox"] {
 
 .login {
   width: 20rem;
-  padding: 2rem 1.7rem;
+  padding: 2rem 1.4rem;
   border-radius: 16px;
   display: flex;
   flex-direction: column;
@@ -386,10 +386,11 @@ input[type="checkbox"] {
 }
 
 .message__done-register {
+  animation: backwards 5s;
   height: 2rem;
   width: 16rem;
   border-radius: 12px;
-  gap: 8px;
+  gap: 6px;
   display: flex;
   align-items: center;
   justify-content: center;

@@ -2,7 +2,7 @@ import { IconBack, IconText, IconShow, IconHide, IconHideConfirm, IconShowConfir
 import { inputNameKeyUp, inputNameFocusIn, inputNameBlur, inputNumberFocusIn, inputNumberBlur, inputNumberKeyUp, inputPassFocusIn, inputPassBlur, showPassRegister, inputConfirmPassFocusIn, inputConfirmPassBlur, inputConfirmPassKeyUp, showConfirmRegister } from "../functions/inputRegister";
 import reviewRegister from "../functions/buttonRegister";
 
-const SignUp = ({ isRegistering, setIsRegistering }) => {
+const SignUp = ({ isRegistering, setIsRegistering, gotRegister, setGotRegister }) => {
 
   return (
     <section className="container-registerUser">
@@ -63,6 +63,10 @@ const SignUp = ({ isRegistering, setIsRegistering }) => {
           <button onClick={() => {
             if (reviewRegister()) {
               setIsRegistering(!isRegistering);
+              setGotRegister(gotRegister = true);
+              setTimeout(() => {
+                setGotRegister(gotRegister = false);
+              }, 3000);
             }
           }} className="btn-registerUser" type="button" name="button to Register">Registrarme Ahora</button>
         </form>

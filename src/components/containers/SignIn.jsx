@@ -11,11 +11,11 @@ const SignIn = ({ isRegistering, setIsRegistering }) => {
         <h1 className="login-title-h1">Inicia Sesión</h1>
 
         <form className="wrapper-field">
-          <p>Identificador</p>
+          <p>Número telefónico</p>
           <div className="field-id">
             <IconMail />
             <input onBlur={blurFieldID} onFocus={focusFieldID} autoComplete="off" className="input-login-id" type="email" name="field ID"
-              placeholder="Ingresa tu número telefónico" />
+              placeholder="Ingresa tu identificador" />
           </div>
           <p>Contraseña</p>
           <div className="field-password">
