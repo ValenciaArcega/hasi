@@ -49,7 +49,7 @@ const reviewRegister = () => {
 
   if (resultName && resultID && resultPass) {
 
-    users.push({ name: dataNAME, number: Number(dataID), pin: Number(dataPASS), premium: false });
+    users.push({ name: dataNAME, number: Number(dataID), pin: dataPASS, premium: false });
     console.log(users);
     resultID = false;
     resultPass = false;

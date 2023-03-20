@@ -15,7 +15,7 @@
 :root {
   --mainColor: #2e466f;
   --bg: #f2f2f7;
-  --18: #181818;
+  --black18: #181818;
   --ff: #fff;
 
   --fieldID: #d1d1d1;
@@ -385,7 +385,8 @@ input[type="checkbox"] {
   z-index: 5;
 }
 
-.message__done-register {
+.message__done-register,
+.message__wrong-login {
   animation: backwards 5s;
   height: 2rem;
   width: 16rem;
@@ -395,7 +396,7 @@ input[type="checkbox"] {
   align-items: center;
   justify-content: center;
   position: fixed;
-  top: 28px;
+  top: 32px;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #fff;
@@ -407,11 +408,16 @@ input[type="checkbox"] {
   color: #53ac57;
 }
 
-.message__done-register-p {
+.message__done-register-p,
+.message__wrong-login-p {
   font-size: 14px;
   font-weight: 500;
 }
 
+.message__wrong-login-svg {
+  height: 20px;
+  color: #ff3434;
+}
 
 
 /* modal */

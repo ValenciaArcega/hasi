@@ -1,13 +1,35 @@
+
+import { useState } from 'react';
 import { IconMail, IconPassword } from "../icons/svg-login";
 import { blurFieldID, focusFieldID, focusFieldPass, blurFieldPass } from "../functions/inputLogin";
+import WrongLogin from "../messages/msg-wrongLogin";
+import users from "../../data/users";
 
 const SignIn = ({ updateLog, isRegistering, setIsRegistering }) => {
 
-  const handleClick = () => {
-    updateLog(true);
+  let [isWrong, setIsWrong] = useState(false);
+
+  const checkCredentials = () => {
+    const a = document.querySelector('.input-login-id');
+    const b = document.querySelector('.input-login-pass');
+
+    users.forEach((user) => {
+      if (Number(a.value) === user.number && b.value === user.pin) {
+        updateLog(true);
+      } else {
+        setIsWrong(isWrong = true);
+        setTimeout(() => {
+          setIsWrong(isWrong = false);
+        }, 3000);
+      }
+    });
   };
+
   return (
     <main className="container-login">
+      <>
+        {isWrong ? <WrongLogin /> : null}
+      </>
       <div className="login">
 
         <img className="logo-img" src="login.svg" alt="ilustration person opening a door" />
@@ -29,14 +51,14 @@ const SignIn = ({ updateLog, isRegistering, setIsRegistering }) => {
           </div>
         </form>
 
-        <button onClick={handleClick} className="btn-logIn" type="button">Ingresar</button>
+        <button onClick={checkCredentials} className="btn-logIn" type="button">Ingresar</button>
 
         <button className="btn__toggle__accOrReg" onClick={() => {
           setIsRegistering(!isRegistering);
         }}>¿No tienes una cuenta? Regístrate
         </button>
       </div>
-    </main>
+    </main >
   );
 };
 
