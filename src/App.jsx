@@ -6,12 +6,12 @@ import './App.css';
 
 export function App() {
 
-  const [isLogged, setIsLogged] = useState(false);
+  const [isLogged, setIsLogged] = useState(null);
   const updateLog = (newValue) => setIsLogged(newValue);
 
   return (
     <>
-      {isLogged ? <Home /> : <Login updateLog={updateLog} />}
+      {!isLogged ? <Home /> : <Login updateLog={updateLog} />}
     </>
   );
 }

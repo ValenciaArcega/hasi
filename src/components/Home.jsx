@@ -1,5 +1,11 @@
+import NavBarDesktop from "./navegation/NavBar-desktop";
+
 const Home = () => {
-  return <h1>Welcome!</h1>;
+  return (
+    <main className="screen-home">
+      <NavBarDesktop />
+    </main>
+  );
 };
 
 export default Home;

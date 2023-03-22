@@ -14,6 +14,8 @@
 
 :root {
   --mainColor: #2e466f;
+  --mainColor-tint: #43597d;
+  --mainColor-shade: #293f64;
   --bg: #f2f2f7;
   --black18: #181818;
   --ff: #fff;
@@ -484,6 +486,66 @@ input[type="checkbox"] {
 .modal-wrongMessage-btn:hover {
   cursor: pointer;
   background-color: #de3333;
+}
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+.screen-home {
+  height: 100vh;
+  background-color: var(--ff);
+}
+
+.navBar-desktop {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 6rem 1fr;
+  background-color: var(--mainColor-shade);
+}
+
+.navBar-desktop-titleLogo {
+  letter-spacing: 6px;
+  font-weight: 800;
+  color: #fff;
+  align-self: center;
+  justify-self: center;
+}
+
+
+.wrapper-navBar-desktop__buttons {
+  gap: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: flex-end;
+}
+
+/* buttons */
+.navBar__desktop-btn {
+  height: 2.5rem;
+  gap: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  outline: none;
+  color: #fff;
+}
+
+.navBar__desktop-btn:hover {
+  cursor: pointer;
+}
+
+.navBar__desktop-searchIcon,
+.navBar__desktop-darkIcon,
+.navBar__desktop-lightIcon,
+.navBar__desktop-signOutIcon {
+  height: 20px;
+  color: #fff;
+}
+
+.navBar__desktop-darkIcon,
+.navBar__desktop-signOutIcon {
+  height: 18px;
 }
 
 /* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
