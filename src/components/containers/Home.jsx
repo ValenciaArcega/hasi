@@ -1,4 +1,4 @@
-import NavBarDesktop from "./navegation/NavBar-desktop";
+import NavBarDesktop from "../navegation/NavBar-desktop";
 
 const Home = () => {
   return (

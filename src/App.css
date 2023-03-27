@@ -501,6 +501,12 @@ input[type="checkbox"] {
   background-color: var(--mainColor-shade);
 }
 
+.navBar-mobile {
+  width: 100%;
+  display: grid;
+  grid-template-columns: ;
+}
+
 .navBar-desktop-titleLogo {
   letter-spacing: 6px;
   font-weight: 800;
@@ -508,7 +514,6 @@ input[type="checkbox"] {
   align-self: center;
   justify-self: center;
 }
-
 
 .wrapper-navBar-desktop__buttons {
   gap: 32px;

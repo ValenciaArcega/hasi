@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Login from './components/Login';
-import Home from './components/Home';
+import Home from './components/containers/Home';
 
 import './App.css';
 
@@ -11,7 +11,7 @@ export function App() {
 
   return (
     <>
-      {!isLogged ? <Home /> : <Login updateLog={updateLog} />}
+      {isLogged ? <Home /> : <Login updateLog={updateLog} />}
     </>
   );
 }
