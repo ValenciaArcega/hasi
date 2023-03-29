@@ -75,11 +75,7 @@ const SignUp = ({ isRegistering, setIsRegistering }) => {
           </div>
           <p className="registerUser-form-passConfirm-p"></p>
 
-          <button type="submit" onClick={() => {
-            if (reviewRegister()) {
-              setIsRegistering(!isRegistering);
-            }
-          }} className="btn-registerUser" name="button to Register">Registrarme Ahora</button>
+          <button type="submit" onClick={reviewRegister} className="btn-registerUser" name="button to Register">Registrarme Ahora</button>
         </form>
 
       </div>
