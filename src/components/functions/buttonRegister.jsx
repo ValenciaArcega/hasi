@@ -1,4 +1,3 @@
-import users from "../../data/users";
 
 const reviewRegister = () => {
 
@@ -31,9 +30,6 @@ const reviewRegister = () => {
   if (inputID.value === '') {
     root.style.setProperty('--borderFieldID', '#f63737');
     textErrorID.textContent = 'El campo es obligatorio';
-  } else if (inputID.value.match(/[A-Za-z]/)) {
-    root.style.setProperty('--borderFieldID', '#f63737');
-    textErrorID.textContent = 'Solo caracteres tipo númerico';
   } else {
     resultID = true;
   }
@@ -45,16 +41,9 @@ const reviewRegister = () => {
     textErrorPassConfirm.textContent = 'Las contraseñas no coinciden';
   }
   /////////////////////////////////////////////////////////
-  let [dataNAME, dataID, dataPASS] = [inputName.value, inputID.value, inputPass.value];
+  // let [dataNAME, dataID, dataPASS] = [inputName.value, inputID.value, inputPass.value];
 
   if (resultName && resultID && resultPass) {
-
-    users.push({ name: dataNAME, number: Number(dataID), pin: dataPASS, premium: false });
-    console.log(users);
-    resultID = false;
-    resultPass = false;
-    resultName = false;
-
     return reviewed = true;
   }
 
@@ -62,17 +51,3 @@ const reviewRegister = () => {
 };
 
 export default reviewRegister;
-/*
-const input = 55;
-const pin = 111;
-const printUsers = () => {
-  users.forEach((item) => {
-    if (item.number === input && item.pin === pin) {
-      console.log('logeado');
-    } else {
-      console.log('nope');
-    }
-  });
-};
-
-export default printUsers;*/

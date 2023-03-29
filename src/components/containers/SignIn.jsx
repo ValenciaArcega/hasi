@@ -3,55 +3,56 @@ import { useState } from 'react';
 import { IconMail, IconPassword } from "../icons/svg-login";
 import { blurFieldID, focusFieldID, focusFieldPass, blurFieldPass } from "../functions/inputLogin";
 import WrongLogin from "../messages/msg-wrongLogin";
-import users from "../../data/users";
 
-const SignIn = ({ updateLog, isRegistering, setIsRegistering }) => {
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import firebaseApp from "../../credentials";
+
+const auth = getAuth(firebaseApp);
+
+const SignIn = ({ isRegistering, setIsRegistering }) => {
 
   let [isWrong, setIsWrong] = useState(false);
 
-  const checkCredentials = () => {
-    const a = document.querySelector('.input-login-id');
-    const b = document.querySelector('.input-login-pass');
+  async function submitHandler(e) {
+    e.preventDefault();
+    const m = e.target.inputMail.value;
+    const p = e.target.inputPassword.value;
+    await signInWithEmailAndPassword(auth, m, p);
 
-    users.forEach((user) => {
-      if (Number(a.value) === user.number && b.value === user.pin) {
-        updateLog(true);
-      } else {
-        setIsWrong(isWrong = true);
-        setTimeout(() => {
-          setIsWrong(isWrong = false);
-        }, 3000);
-      }
-    });
-  };
+    if (m === auth.mail && p) {
+    } else {
+      setIsWrong(isWrong = true);
+      setTimeout(() => {
+        setIsWrong(isWrong = null);
+      }, 3000);
+    }
+  }
 
   return (
     <main className="container-login">
-      <>
-        {isWrong ? <WrongLogin /> : null}
-      </>
+      <> {isWrong ? <WrongLogin /> : null} </>
+
       <div className="login">
-
         <img className="logo-img" src="login.svg" alt="ilustration person opening a door" />
-
         <h1 className="login-title-h1">Inicia Sesión</h1>
 
-        <form className="wrapper-field">
-          <p>Número telefónico</p>
+        <form className="wrapper-field" onSubmit={submitHandler}>
+
+          <p>Correo electrónico</p>
           <div className="field-id">
             <IconMail />
-            <input onBlur={blurFieldID} onFocus={focusFieldID} autoComplete="off" className="input-login-id" type="email" name="field ID"
-              placeholder="Ingresa tu identificador" />
+            <input onBlur={blurFieldID} onFocus={focusFieldID} autoComplete="off" className="input-login-id" type="email" name="field ID" id="inputMail" placeholder="Ingresa tu correo" />
           </div>
+
           <p>Contraseña</p>
           <div className="field-password">
             <IconPassword />
-            <input onBlur={blurFieldPass} onFocus={focusFieldPass} autoComplete="off" className="input-login-pass" type="password" name="field password"
+            <input onBlur={blurFieldPass} onFocus={focusFieldPass} autoComplete="off" className="input-login-pass" type="password" name="field password" id="inputPassword"
               placeholder="Ingresa tu contraseña" />
           </div>
-        </form>
 
-        <button onClick={checkCredentials} className="btn-logIn" type="button">Ingresar</button>
+          <button className="btn-logIn" type="submit">Ingresar</button>
+        </form>
 
         <button className="btn__toggle__accOrReg" onClick={() => {
           setIsRegistering(!isRegistering);

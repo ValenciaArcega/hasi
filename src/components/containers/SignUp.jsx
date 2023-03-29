@@ -1,11 +1,26 @@
 import { IconBack, IconText, IconShow, IconHide, IconHideConfirm, IconShowConfirm } from "../icons/svg-registerUser";
-import { inputNameKeyUp, inputNameFocusIn, inputNameBlur, inputNumberFocusIn, inputNumberBlur, inputNumberKeyUp, inputPassFocusIn, inputPassBlur, showPassRegister, inputConfirmPassFocusIn, inputConfirmPassBlur, inputConfirmPassKeyUp, showConfirmRegister } from "../functions/inputRegister";
+import { inputNameKeyUp, inputNameFocusIn, inputNameBlur, inputNumberFocusIn, inputNumberBlur, inputPassFocusIn, inputPassBlur, showPassRegister, inputConfirmPassFocusIn, inputConfirmPassBlur, inputConfirmPassKeyUp, showConfirmRegister } from "../functions/inputRegister";
 import reviewRegister from "../functions/buttonRegister";
 
-const SignUp = ({ isRegistering, setIsRegistering, gotRegister, setGotRegister }) => {
+// database
+import firebaseApp from '../../credentials';
+import { getAuth, createUserWithEmailAndPassword, } from 'firebase/auth';
+
+export const auth = getAuth(firebaseApp);
+
+const SignUp = ({ isRegistering, setIsRegistering }) => {
+
+  async function submitHandler(e) {
+    e.preventDefault();
+    const mail = e.target.inputMail.value;
+    const password = e.target.inputPassword.value;
+
+    await createUserWithEmailAndPassword(auth, mail, password);
+  }
 
   return (
     <section className="container-registerUser">
+
       <div className="registerUser">
         <button onClick={() => { setIsRegistering(!isRegistering); }} className="btn-backLogin" type="button">
           <IconBack />
@@ -14,7 +29,7 @@ const SignUp = ({ isRegistering, setIsRegistering, gotRegister, setGotRegister }
 
         <h1 className="registerUser-h1">Crea una cuenta gratis</h1>
 
-        <form className="registerUser-form">
+        <form className="registerUser-form" onSubmit={submitHandler}>
 
           <div className="wrapper-header-input">
             <h4 className="header-input-h4">Nombre</h4>
@@ -24,22 +39,22 @@ const SignUp = ({ isRegistering, setIsRegistering, gotRegister, setGotRegister }
           <p className="registerUser-form-name-p"> </p>
 
           <div className="wrapper-header-input">
-            <h4 className="header-input-h4">Número de teléfono</h4>
-            <p className="header-input-number-p">123</p>
+            <h4 className="header-input-h4">Correo electrónico</h4>
           </div>
-          <input onBlur={inputNumberBlur} onKeyUp={inputNumberKeyUp} onFocus={inputNumberFocusIn} autoComplete="off" placeholder="Ingresa tu número celular" className="registerUser-form-id" />
+          <input onBlur={inputNumberBlur} onFocus={inputNumberFocusIn} autoComplete="off" placeholder="usuario@dominio.com" className="registerUser-form-id" id="inputMail" />
           <p className="registerUser-form-id-p"></p>
 
           <div className="wrapper-header-input">
             <h4 className="header-input-h4">Contraseña</h4>
           </div>
           <div className="wrapper-password">
-            <input onBlur={inputPassBlur} onFocus={inputPassFocusIn} autoComplete="new-password" type="password" className="registerUser-form-pass" placeholder="Crea una contraseña" />
+            <input onBlur={inputPassBlur} onFocus={inputPassFocusIn} autoComplete="new-password" type="password" className="registerUser-form-pass" placeholder="Crea una contraseña" id="inputPassword" />
             <button onClick={showPassRegister} className="btn-showPass" type="button" title="button show">
               <IconShow />
               <IconHide />
             </button>
           </div>
+
           <div className="wrapper-textAdvicePass">
             <p className="registerUser-form-pass-p">Una contraseña segura</p>
             <ul className="registerUser-form-pass-ul">
@@ -60,16 +75,13 @@ const SignUp = ({ isRegistering, setIsRegistering, gotRegister, setGotRegister }
           </div>
           <p className="registerUser-form-passConfirm-p"></p>
 
-          <button onClick={() => {
+          <button type="submit" onClick={() => {
             if (reviewRegister()) {
               setIsRegistering(!isRegistering);
-              setGotRegister(gotRegister = true);
-              setTimeout(() => {
-                setGotRegister(gotRegister = false);
-              }, 3000);
             }
-          }} className="btn-registerUser" type="button" name="button to Register">Registrarme Ahora</button>
+          }} className="btn-registerUser" name="button to Register">Registrarme Ahora</button>
         </form>
+
       </div>
     </section>
   );

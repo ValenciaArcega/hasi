@@ -28,25 +28,7 @@ const inputNameKeyUp = () => {
 // input number
 const inputNumberFocusIn = () => root.style.setProperty('--borderFieldID', '#2e466f');
 const inputNumberBlur = () => root.style.setProperty('--borderFieldID', '#a1a1a1');
-const inputNumberKeyUp = () => {
 
-  const inputID = document.querySelector('.registerUser-form-id');
-  const textErrorID = document.querySelector('.registerUser-form-id-p');
-
-  for (let i = 0; i < inputID.value.length; i++) {
-    root.style.setProperty('--borderFieldID', '#2e466f');
-    if (inputID.value[i].match(/[A-Za-z]/)) {
-      textErrorID.textContent = 'Recuerda, caracteres de tipo numérico';
-      root.style.setProperty('--borderFieldID', '#f63737');
-    } else {
-      textErrorID.textContent = '';
-    }
-  }
-  if (inputID.value === '') {
-    textErrorID.textContent = '';
-    root.style.setProperty('--borderFieldID', '#2e466f');
-  }
-};
 
 ////////////////////////////////////////////////////////////
 // input password
@@ -103,4 +85,4 @@ const showConfirmRegister = () => {
   }
 };
 
-export { inputNameKeyUp, inputNameFocusIn, inputNameBlur, inputNumberFocusIn, inputNumberBlur, inputNumberKeyUp, inputPassFocusIn, inputPassBlur, showPassRegister, inputConfirmPassFocusIn, inputConfirmPassBlur, inputConfirmPassKeyUp, showConfirmRegister };
+export { inputNameKeyUp, inputNameFocusIn, inputNameBlur, inputNumberFocusIn, inputNumberBlur, inputPassFocusIn, inputPassBlur, showPassRegister, inputConfirmPassFocusIn, inputConfirmPassBlur, inputConfirmPassKeyUp, showConfirmRegister };

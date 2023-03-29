@@ -1,6 +1,9 @@
 import { IconSearch, IconMoon, IconSun, IconSignOut } from "../icons/svg-navBarDesktop";
 import { makeDarkOnDesk, makeLightOnDesk } from "../functions/appearance/appearance-desktop";
 
+import { auth } from "../containers/SignUp";
+import { signOut } from 'firebase/auth';
+
 const NavBarDesktop = () => {
   return (
     <nav className="navBar-desktop">
@@ -19,7 +22,7 @@ const NavBarDesktop = () => {
           <IconSun />
           Claro
         </button>
-        <button className="navBar__desktop-btn navBar__desktop-signOut" type="button">
+        <button className="navBar__desktop-btn navBar__desktop-signOut" type="button" onClick={() => signOut(auth)}>
           <IconSignOut />
           Cerrar Sesión
         </button>

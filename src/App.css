@@ -93,7 +93,6 @@ input[type="checkbox"] {
 }
 
 .wrapper-field {
-  height: 12rem;
   width: 95%;
   display: flex;
   flex-direction: column;
@@ -188,9 +187,9 @@ input[type="checkbox"] {
 }
 
 .registerUser {
-  height: 35rem;
+  /* height: 35rem; */
   width: 20rem;
-  padding: 6px 1rem 8px 1rem;
+  padding: 6px 1rem 18px 1rem;
   border-radius: 32px;
   display: flex;
   flex-direction: column;
@@ -246,19 +245,13 @@ input[type="checkbox"] {
 
 .header-input-h4 {
   font-weight: 500;
+  letter-spacing: -.4px;
+  padding-top: 4px;
   padding-left: 8px;
 }
 
 .header-input-svg {
   font-size: 20px;
-  color: var(--mainColor);
-}
-
-/* 123 */
-.header-input-number-p {
-  font-size: 15px;
-  letter-spacing: -.5px;
-  font-weight: 500;
   color: var(--mainColor);
 }
 
@@ -358,7 +351,6 @@ input[type="checkbox"] {
 
 .btn-registerUser {
   min-height: 2.5rem;
-  margin-top: 12px;
   border-radius: 100px;
   font-size: 16px;
   border: none;
@@ -403,11 +395,6 @@ input[type="checkbox"] {
   transform: translate(-50%, -50%);
   background-color: #fff;
   box-shadow: 0 10px 15px -6px rgba(0, 0, 0, 0.4);
-}
-
-.message__done-register-svg {
-  height: 24px;
-  color: #53ac57;
 }
 
 .message__done-register-p,
@@ -504,7 +491,7 @@ input[type="checkbox"] {
 .navBar-mobile {
   width: 100%;
   display: grid;
-  grid-template-columns: ;
+  /* grid-template-columns: ; */
 }
 
 .navBar-desktop-titleLogo {
