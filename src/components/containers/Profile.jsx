@@ -1,4 +1,15 @@
+import { auth } from "./SignUp";
+import { signOut } from "firebase/auth";
 
-const Profile = () => <h1>Accoun page</h1>;
+const Profile = () => {
+  return (
+    <section>
+      <h1>Bienvenido </h1>
+      <button onClick={() => { signOut(auth); }}>
+        Cerrar Sesión
+      </button>
+    </section>
+  );
+};
 
 export default Profile;

@@ -1,7 +1,11 @@
-import NavBarDesktop from "../navegation/NavBar-desktop";
-import NavBarMobile from "../navegation/NavBar-mobile.";
-
-
-const Dashboard = () => <h1>I am the home page</h1>;
+const Dashboard = () => {
+  return (
+    <section>
+      <header>
+        <h1>Hola hasi! 👋</h1>
+      </header>
+    </section>
+  );
+};
 
 export default Dashboard;

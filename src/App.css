@@ -28,6 +28,10 @@
   --borderFieldID: #a1a1a1;
   --borderFieldPass: #a1a1a1;
   --borderFieldPassConfirm: #a1a1a1;
+
+  /* Blur buttons */
+  --blurSwitch: rgba(255, 255, 255, 0.2);
+  --blurSwitchBorder: rgba(0, 0, 0, .6)
 }
 
 ::selection {
@@ -485,6 +489,7 @@ input[type="checkbox"] {
 
 .navBar-desktop {
   width: 100%;
+  padding-right: 8px;
   border-bottom: 2px solid var(--mainColor);
   display: grid;
   grid-template-columns: 6rem 1fr;
@@ -519,7 +524,6 @@ input[type="checkbox"] {
 }
 
 .nbMobile-button:hover {
-  /* pointer-events: none; */
   cursor: pointer;
 }
 
@@ -569,6 +573,7 @@ input[type="checkbox"] {
   background: none;
   border: none;
   outline: none;
+  font-size: 16px;
   font-weight: 500;
   text-decoration: none;
   color: var(--black18);
@@ -579,17 +584,44 @@ input[type="checkbox"] {
 }
 
 .navBar__desktop-searchIcon,
-.navBar__desktop-darkIcon,
-.navBar__desktop-lightIcon,
-.navBar__desktop-signOutIcon {
+.navBar__desktop-personIcon {
   height: 20px;
   color: var(--black18);
 }
 
-.navBar__desktop-darkIcon,
-.navBar__desktop-signOutIcon {
-  height: 18px;
+.btnDark,
+.btnLight {
+  height: 48px;
+  width: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 64px;
+  right: 12px;
+  border-radius: 50%;
+  border: 2px solid var(--blurSwitchBorder);
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+  background-color: var(--blurSwitch);
 }
+
+.btnDark:hover,
+.btnLight:hover {
+  cursor: pointer;
+}
+
+.btnDarkIcon,
+.btnLightIcon {
+  height: 24px;
+  color: #181818;
+}
+
+.btnLightIcon {
+  color: #fff;
+}
+
+
 
 /* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 .hidden {

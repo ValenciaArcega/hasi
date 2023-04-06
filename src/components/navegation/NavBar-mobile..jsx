@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const NavBarMobile = () => {
   return (
-    <nav className="navBar-mobile">
+    <nav className="navBar-mobile hidden">
       <Link to='/hasi/' className="nbMobile-button">
         <IconHome />
         Inicio
