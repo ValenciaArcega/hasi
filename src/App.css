@@ -485,21 +485,68 @@ input[type="checkbox"] {
 
 .navBar-desktop {
   width: 100%;
+  border-bottom: 2px solid var(--mainColor);
   display: grid;
   grid-template-columns: 6rem 1fr;
-  background-color: var(--mainColor-shade);
+  background-color: var(--ff);
 }
 
+/* Mobile navigation bar */
 .navBar-mobile {
+  height: 48px;
   width: 100%;
+  border-top: 2px solid var(--mainColor-shade);
+  position: fixed;
+  bottom: 0;
+  left: 0;
   display: grid;
-  /* grid-template-columns: ; */
+  justify-items: center;
+  grid-template-columns: 2fr 1fr 2fr;
+  background-color: var(--ff);
 }
+
+.nbMobile-button {
+  font-size: 12px;
+  font-weight: 600;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--black18);
+  text-decoration: none;
+  background-color: var(--ff);
+}
+
+.nbMobile-button:hover {
+  /* pointer-events: none; */
+  cursor: pointer;
+}
+
+.nbMobile-icon {
+  height: 24px;
+}
+
+.nbMobile-buttonSearch {
+  min-height: 64px;
+  min-width: 64px;
+  align-self: flex-start;
+  margin-top: -30px;
+  border-radius: 50%;
+  background-color: var(--mainColor-shade);
+  color: #fff;
+}
+
+.nbMobile-iconSearch {
+  height: 24px;
+}
+
+
 
 .navBar-desktop-titleLogo {
-  letter-spacing: 6px;
-  font-weight: 800;
-  color: #fff;
+  letter-spacing: 3px;
+  font-weight: 700;
+  color: var(--black18);
   align-self: center;
   justify-self: center;
 }
@@ -522,7 +569,9 @@ input[type="checkbox"] {
   background: none;
   border: none;
   outline: none;
-  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--black18);
 }
 
 .navBar__desktop-btn:hover {
@@ -534,7 +583,7 @@ input[type="checkbox"] {
 .navBar__desktop-lightIcon,
 .navBar__desktop-signOutIcon {
   height: 20px;
-  color: #fff;
+  color: var(--black18);
 }
 
 .navBar__desktop-darkIcon,

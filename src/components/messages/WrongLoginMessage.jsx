@@ -1,5 +1,5 @@
 
-import { IconWrongLogin } from '../icons/svg-login';
+import { IconWrongLogin } from '../icons/LoginIcons';
 
 const WrongLogin = () => {
   return (

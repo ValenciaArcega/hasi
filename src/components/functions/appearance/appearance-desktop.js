@@ -4,6 +4,7 @@ const makeDarkOnDesk = () => {
   document.querySelector('.navBar__desktop-dark').classList.add('hidden');
 
   root.style.setProperty('--ff', 'black');
+  root.style.setProperty('--black18', '#fff');
   root.style.setProperty('--mainColor-shade', '#43597d');
 };
 
@@ -14,6 +15,7 @@ const makeLightOnDesk = () => {
   document.querySelector('.navBar__desktop-dark').classList.remove('hidden');
 
   root.style.setProperty('--ff', '#fff');
+  root.style.setProperty('--black18', '#181818');
   root.style.setProperty('--mainColor-shade', '#293f64');
 };
 

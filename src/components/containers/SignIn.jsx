@@ -1,8 +1,8 @@
 
 import { useState } from 'react';
-import { IconMail, IconPassword } from "../icons/svg-login";
+import { IconMail, IconPassword } from "../icons/LoginIcons";
 import { blurFieldID, focusFieldID, focusFieldPass, blurFieldPass } from "../functions/inputLogin";
-import WrongLogin from "../messages/msg-wrongLogin";
+import WrongLogin from "../messages/WrongLoginMessage";
 
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import firebaseApp from "../../credentials";
