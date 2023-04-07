@@ -6,6 +6,7 @@ const makeDarkOnDesk = () => {
   root.style.setProperty('--blurSwitch', 'rgba(0,0,0,0.2)');
   root.style.setProperty('--blurSwitchBorder', 'rgba(255,255,255,0.6)');
   root.style.setProperty('--ff', 'black');
+  root.style.setProperty('--bg', '#181818');
   root.style.setProperty('--black18', '#fff');
   root.style.setProperty('--mainColor-shade', '#43597d');
 };
@@ -19,6 +20,7 @@ const makeLightOnDesk = () => {
   root.style.setProperty('--blurSwitchBorder', 'rgba(0,0,0,0.6)');
   root.style.setProperty('--blurSwitch', 'rgba(255, 255, 255, 0.2)');
   root.style.setProperty('--ff', '#fff');
+  root.style.setProperty('--bg', '#f2f2f7');
   root.style.setProperty('--black18', '#181818');
   root.style.setProperty('--mainColor-shade', '#293f64');
 };
