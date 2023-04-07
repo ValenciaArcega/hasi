@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const NavBarDesktop = () => {
   return (
     <nav className="navBar-desktop">
-      <h1 className="navBar-desktop-titleLogo">Hasi</h1>
+      <h1 className="navBar-desktop-titleLogo"><span className="highlight-container"><span className="highlight">Hasi</span></span></h1>
       <div className="wrapper-navBar-desktop__buttons">
 
         <Link to='/hasi/' className="navBar__desktop-btn navBar__desktop-search" >
