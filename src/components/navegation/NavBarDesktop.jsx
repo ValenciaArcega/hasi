@@ -1,5 +1,5 @@
-import { IconHome, IconSearch, IconPerson } from "../icons/NBDesktopIcons";
 import { Link } from "react-router-dom";
+import { IconHome, IconSearch, IconPerson } from "../icons/NBDesktopIcons";
 
 const NavBarDesktop = () => {
   return (
@@ -8,17 +8,17 @@ const NavBarDesktop = () => {
       <div className="wrapper-navBar-desktop__buttons">
 
         <Link to='/hasi/' className="navBar__desktop-btn navBar__desktop-search" >
-          <IconHome />
+          {/* <IconHome /> */}
           Inicio
         </Link>
 
         <Link to='/hasi/search' className="navBar__desktop-btn navBar__desktop-search" >
           <IconSearch />
-          Buscar
+          Descubrir
         </Link>
 
         <Link to='/hasi/profile' className="navBar__desktop-btn navBar__desktop-signOut">
-          <IconPerson />
+          {/* <IconPerson /> */}
           Cuenta
         </Link>
       </div>

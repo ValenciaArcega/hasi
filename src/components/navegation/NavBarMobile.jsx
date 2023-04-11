@@ -1,5 +1,5 @@
-import { IconHome, IconSearch, IconPerson } from "../icons/NBMobileIcons";
 import { Link } from "react-router-dom";
+import { IconHome, IconSearch, IconPerson } from "../icons/NBMobileIcons";
 
 const NavBarMobile = () => {
   return (

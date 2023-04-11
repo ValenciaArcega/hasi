@@ -1,11 +1,10 @@
 
-import { useState } from 'react';
-import { IconMail, IconPassword } from "../icons/LoginIcons";
-import { blurFieldID, focusFieldID, focusFieldPass, blurFieldPass } from "../functions/inputLogin";
-import WrongLogin from "../messages/WrongLoginMessage";
-
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import firebaseApp from "../../credentials";
+import WrongLogin from "../messages/WrongLoginMessage";
+import { blurFieldID, focusFieldID, focusFieldPass, blurFieldPass } from "../../functions/review-inputLogin";
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { IconMail, IconPassword } from "../icons/LoginIcons";
+import { useState } from 'react';
 
 const auth = getAuth(firebaseApp);
 
@@ -15,16 +14,15 @@ const SignIn = ({ isRegistering, setIsRegistering }) => {
 
   async function submitHandler(e) {
     e.preventDefault();
-    const m = e.target.inputMail.value;
-    const p = e.target.inputPassword.value;
-    await signInWithEmailAndPassword(auth, m, p);
-
-    if (m === auth.mail && p) {
-    } else {
-      setIsWrong(isWrong = true);
+    try {
+      const m = e.target.inputMail.value;
+      const p = e.target.inputPassword.value;
+      await signInWithEmailAndPassword(auth, m, p);
+    } catch (e) {
+      setIsWrong(true);
       setTimeout(() => {
-        setIsWrong(isWrong = null);
-      }, 3000);
+        setIsWrong(false);
+      }, 4000);
     }
   }
 

@@ -1,6 +1,6 @@
 import { IconBack, IconText, IconShow, IconHide, IconHideConfirm, IconShowConfirm } from "../icons/RegisterUserIcons";
-import { inputNameKeyUp, inputNameFocusIn, inputNameBlur, inputNumberFocusIn, inputNumberBlur, inputPassFocusIn, inputPassBlur, showPassRegister, inputConfirmPassFocusIn, inputConfirmPassBlur, inputConfirmPassKeyUp, showConfirmRegister } from "../functions/inputRegister";
-import reviewRegister from "../functions/buttonRegister";
+import { inputNameKeyUp, inputNameFocusIn, inputNameBlur, inputNumberFocusIn, inputNumberBlur, inputPassFocusIn, inputPassBlur, showPassRegister, inputConfirmPassFocusIn, inputConfirmPassBlur, inputConfirmPassKeyUp, showConfirmRegister } from "../../functions/review-inputRegister";
+import reviewRegister from "../../functions/review-userRegistration";
 import firebaseApp from '../../credentials';
 import { getAuth, createUserWithEmailAndPassword, } from 'firebase/auth';
 

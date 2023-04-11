@@ -40,6 +40,9 @@
   /* Gradients */
   --gradient-primary: linear-gradient(to top left, #2e466f, #8eafe8);
   /* --gradient-primary: linear-gradient(to top left, #39b385, #9be15d); */
+
+  --borderCardsWhyHS: #c1c1c1;
+  --bgCardsWhyHS: #fff;
 }
 
 ::selection {
@@ -64,6 +67,7 @@ html {
 body {
   overflow-x: hidden;
   font-family: 'Inter', sans-serif;
+  color: var(--black18);
   background-color: var(--bg);
 }
 
@@ -203,11 +207,9 @@ input[type="checkbox"] {
 }
 
 .registerUser {
-  /* height: 35rem; */
   width: 20rem;
-  /* margin-top: 3rem; */
   padding: 6px 1rem 18px 1rem;
-  border-radius: 32px;
+  border-radius: 16px;
   display: flex;
   flex-direction: column;
   place-items: center;
@@ -215,10 +217,9 @@ input[type="checkbox"] {
 }
 
 .btn-backLogin {
-  margin-top: 16px;
+  margin-top: 10px;
   font-size: 16px;
   display: flex;
-  gap: 2px;
   font-weight: 500;
   align-items: center;
   align-self: flex-start;
@@ -503,14 +504,18 @@ input[type="checkbox"] {
   width: 100%;
   padding-right: 12px;
   border-bottom: 2px solid var(--mainColor);
+  position: fixed;
+  top: 0;
+  left: 0;
   display: grid;
   grid-template-columns: 6rem 1fr;
   background-color: var(--bg);
+  z-index: 4;
 }
 
 /* Mobile navigation bar */
 .navBar-mobile {
-  height: 48px;
+  height: 54px;
   width: 100%;
   border-top: 2px solid var(--mainColor-shade);
   position: fixed;
@@ -613,8 +618,8 @@ input[type="checkbox"] {
   align-items: center;
   justify-content: center;
   position: fixed;
-  bottom: 58px;
-  right: 24px;
+  bottom: 64px;
+  right: 32px;
   border-radius: 50%;
   border: 2px solid var(--blurSwitchBorder);
   -webkit-backdrop-filter: blur(3px);
@@ -639,7 +644,7 @@ input[type="checkbox"] {
 
 /* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 .dashboard-header {
-  height: 75vh;
+  height: 87vh;
   display: flex;
   flex-direction: column;
   place-content: center;
@@ -656,6 +661,51 @@ input[type="checkbox"] {
 .dashboard-header-p {
   margin-top: 10px;
   font-weight: 500;
+}
+
+.whyHS-h1 {
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.section-whyHS {
+  margin: 2rem 1rem 8rem 1rem;
+  gap: 3rem;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(14em, 1fr));
+}
+
+
+.card-reasonWhy {
+  height: 11.2rem;
+  width: 16rem;
+  padding: 1rem 9px;
+  border-radius: 12px;
+  gap: 9px;
+  border: 1px solid var(--borderCardsWhyHS);
+  pointer-events: none;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bgCardsWhyHS);
+}
+
+.card-reasonWhy-svg {
+  color: var(--mainColor);
+  height: 28px;
+}
+
+.card-reasonWhy-h2 {
+  font-size: 1rem;
+}
+
+.card-reasonWhy-p {
+  font-size: 16px;
+  line-height: 1.5;
 }
 
 /* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
@@ -711,6 +761,48 @@ input[type="checkbox"] {
 .post-textContainer-h2 {
   font-weight: 700;
   letter-spacing: -1px;
+}
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+.section-profile {
+  height: 100vh;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-h1 {
+  letter-spacing: -1.1px;
+  font-size: 3rem;
+  color: var(--black18);
+}
+
+.profile-buttonSignOut {
+  width: 12rem;
+  height: 44px;
+  border-radius: 8px;
+  border: none;
+  color: #fff;
+  background-color: #ff3434;
+  box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, .1);
+}
+
+.profile-buttonSignOut:hover {
+  cursor: pointer;
+  box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.13);
+}
+
+.profile-buttonSignOut-link {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+footer {
+  text-align: center;
+  padding: 3rem 0 1rem 0;
 }
 
 /* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */

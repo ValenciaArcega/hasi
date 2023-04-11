@@ -1,11 +1,11 @@
-import NavBarDesktop from "../navegation/NavBar-desktop";
-import NavBarMobile from "../navegation/NavBar-mobile.";
+import NavBarDesktop from "../navegation/NavBarDesktop";
+import NavBarMobile from "../navegation/NavBarMobile";
+import Appearance from "../buttons/Appearance";
 import Dashboard from "./Dashboard";
-import Search from "./Search";
 import Profile from "./Profile";
+import Search from "./Search";
 import { Route, Routes } from 'react-router-dom';
 import { useEffect } from "react";
-import Appearance from "../buttons/appearance";
 
 const Home = () => {
 
@@ -32,13 +32,11 @@ const Home = () => {
     <main className="screen-home">
       <NavBarDesktop />
       <NavBarMobile />
-
       <Routes>
         <Route path='/hasi//*' element={<Dashboard />}></Route>
         <Route path='/hasi/search' element={<Search />}></Route>
         <Route path='/hasi/profile' element={<Profile />}></Route>
       </Routes>
-
       <Appearance />
     </main>
   );

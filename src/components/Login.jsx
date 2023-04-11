@@ -1,6 +1,6 @@
+import SignIn from "./views/SignIn";
+import SignUp from "./views/SignUp";
 import { useState } from "react";
-import SignIn from "./containers/SignIn";
-import SignUp from "./containers/SignUp";
 
 const Login = () => {
 
