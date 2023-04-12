@@ -7,14 +7,12 @@ const Profile = () => {
   return (
     <section className="section-profile">
       <h1 className="profile-h1">Bienvenido </h1>
-      <button className="profile-buttonSignOut" onClick={() => {
+      <Link onClick={() => {
         makeLight();
         signOut(auth);
-      }}>
-        <Link to='/hasi/' className="profile-buttonSignOut-link">
-          Cerrar Sesión
-        </Link>
-      </button>
+      }} to='/hasi/' className="profile-buttonSignOut-link">
+        Cerrar Sesión
+      </Link>
     </section>
   );
 };

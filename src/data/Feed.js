@@ -8,17 +8,17 @@ const feed = [
   },
   {
     image: "Imagen01",
-    name: "Letra: A",
+    name: "Letra: B",
     description: "Cierra el puño y deja el pulgar fuera pero pegado",
   },
   {
     image: "Imagen01",
-    name: "Letra: A",
+    name: "Letra: C",
     description: "Cierra el puño y deja el pulgar fuera pero pegado",
   },
   {
     image: "Imagen01",
-    name: "Letra: A",
+    name: "Letra: D",
     description: "Cierra el puño y deja el pulgar fuera pero pegado",
   },
   {
