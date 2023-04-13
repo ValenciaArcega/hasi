@@ -43,6 +43,10 @@
 
   --borderCardsWhyHS: #c1c1c1;
   --bgCardsWhyHS: #fff;
+
+  --bgPost: #fff;
+
+  --shadowForms: 0px 16px 20px 5px rgba(54, 100, 193, 0.15);
 }
 
 ::selection {
@@ -81,6 +85,10 @@ input[type="checkbox"] {
   accent-color: red;
 }
 
+section {
+  background-color: var(--bg);
+}
+
 /* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 .container-login {
   height: 100vh;
@@ -88,7 +96,6 @@ input[type="checkbox"] {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: var(--mainColor);
 }
 
 .logo-img {
@@ -104,6 +111,7 @@ input[type="checkbox"] {
   flex-direction: column;
   place-items: center;
   background-color: #fff;
+  box-shadow: var(--shadowForms);
 }
 
 .login-title-h1 {
@@ -199,11 +207,11 @@ input[type="checkbox"] {
 
 /* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 .container-registerUser {
-  height: 100vh;
+  /* height: 100vh; */
+  padding: 1.2rem 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--mainColor);
 }
 
 .registerUser {
@@ -214,6 +222,7 @@ input[type="checkbox"] {
   flex-direction: column;
   place-items: center;
   background-color: #fff;
+  box-shadow: var(--shadowForms);
 }
 
 .btn-backLogin {
@@ -369,6 +378,7 @@ input[type="checkbox"] {
 
 .btn-registerUser {
   min-height: 2.5rem;
+  margin-top: 1rem;
   border-radius: 100px;
   font-size: 16px;
   font-weight: 400;
@@ -469,30 +479,6 @@ input[type="checkbox"] {
   background-color: #f2f2f7;
 }
 
-.modal-wrongMessage-btn,
-.modal-doneMessage-btn,
-.modal-doneLogin-btn {
-  margin-top: 1rem;
-  width: 100%;
-  padding: 8px 0;
-  border-radius: 8px;
-  font-size: 16px;
-  font-weight: 400;
-  outline: none;
-  border: none;
-  color: var(--bg);
-  background-color: #f63737;
-}
-
-.modal-doneMessage-btn,
-.modal-doneLogin-btn {
-  background-color: var(--mainColor);
-}
-
-.modal-wrongMessage-btn:hover {
-  cursor: pointer;
-  background-color: #de3333;
-}
 
 /* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 .screen-home {
@@ -738,11 +724,11 @@ input[type="checkbox"] {
   margin: 16px 8px;
   border-radius: 18px;
   /* border: 1px solid #c5c5c5; */
-  background-color: var(--ff);
+  background-color: var(--bgPost);
   display: flex;
   flex-direction: column;
   gap: 8px;
-  box-shadow: 0px 5px 20px 8px rgba(0, 0, 0, .1);
+  /* box-shadow: 0px 5px 20px 8px rgba(0, 0, 0, .1); */
 }
 
 .post-image {

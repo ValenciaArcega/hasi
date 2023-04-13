@@ -11,6 +11,7 @@ const makeDark = () => {
   root.style.setProperty('--mainColor-shade', '#43597d');
   root.style.setProperty('--borderCardsWhyHS', '#121212');
   root.style.setProperty('--bgCardsWhyHS', '#0d0d0d');
+  root.style.setProperty('--bgPost', '#0c0c0c');
 };
 
 
@@ -27,6 +28,7 @@ const makeLight = () => {
   root.style.setProperty('--mainColor-shade', '#293f64');
   root.style.setProperty('--borderCardsWhyHS', '#c1c1c1');
   root.style.setProperty('--bgCardsWhyHS', '#fff');
+  root.style.setProperty('--bgPost', '#fff');
 };
 
 export { makeDark, makeLight };
