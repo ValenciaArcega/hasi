@@ -1,4 +1,4 @@
-import feed from "../../data/Feed";
+import feed from "../../data/feed";
 import { useState } from "react";
 
 const Search = () => {
@@ -18,12 +18,12 @@ const Search = () => {
         <button onClick={() => setFilteredItems(feed)} className="finder-btnClose" type="reset"> <IconClose /> </button>
       </form>
 
-      <h1 className="section-feed-h1"><span className="highlight-container"><span className="highlight">Lo básico</span></span></h1>
+      <h1 className="section-feed-h1"><span className="highlight-container"><span className="highlight">Abecedario</span></span></h1>
       <main className="feed">
         {filteredItems.map(({ image, name, description } = feed, i) => {
           return (
             <div className="post" key={i}>
-              <div className="post-image">{image}</div>
+              <img src={image} alt="" />
               <main className="post-textContainer">
                 <h2 className="post-textContainer-h2">{name}</h2>
                 <p>{description}</p>
