@@ -10,8 +10,8 @@ const makeDark = () => {
   root.style.setProperty('--black18', '#fff');
   root.style.setProperty('--mainColor-shade', '#43597d');
   root.style.setProperty('--borderCardsWhyHS', '#121212');
-  root.style.setProperty('--bgCardsWhyHS', '#0d0d0d');
-  root.style.setProperty('--bgPost', '#0c0c0c');
+  root.style.setProperty('--bgCardsWhyHS', '#141414');
+  root.style.setProperty('--bgPost', '#141414');
 };
 
 

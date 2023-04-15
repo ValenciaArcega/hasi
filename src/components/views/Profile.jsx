@@ -6,7 +6,7 @@ import { auth } from "./SignUp";
 const Profile = () => {
   return (
     <section className="section-profile">
-      <h1 className="profile-h1">Bienvenido </h1>
+      {/* <h1 className="profile-h1">Bienvenido </h1> */}
       <Link onClick={() => {
         makeLight();
         signOut(auth);
