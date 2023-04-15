@@ -46,7 +46,7 @@
 
   --bgPost: #fff;
 
-  --shadowForms: 0px 16px 20px 5px rgba(54, 100, 193, 0.15);
+  --shadowForms: 0px 4px 20px -5px rgba(54, 100, 193, 0.15);
 }
 
 ::selection {
@@ -711,7 +711,7 @@ section {
 }
 
 .feed {
-  padding: 1rem 1rem;
+  padding: 1rem 1rem 10rem 1rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
   align-items: center;
@@ -732,7 +732,7 @@ section {
 }
 
 .post img {
-  height: 70%;
+  height: 60%;
   width: 100%;
   border-radius: 18px 18px 0 0;
   background-color: #293f64;
