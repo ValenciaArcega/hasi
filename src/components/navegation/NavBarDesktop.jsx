@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { IconHome, IconSearch, IconPerson } from "../icons/NBDesktopIcons";
+import IconSearch from "../icons/NBDesktopIcons";
 
 const NavBarDesktop = () => {
   return (

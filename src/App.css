@@ -118,6 +118,7 @@ section {
   font-size: 38px;
   letter-spacing: -.8px;
   font-weight: 800;
+  color: #2e466f;
 }
 
 .wrapper-field {
@@ -129,10 +130,10 @@ section {
 
 .field-id,
 .field-password {
-  height: 2.5rem;
+  height: 48px;
   width: 100%;
   margin-top: 4px;
-  border-radius: 100px;
+  border-radius: 10px;
   border: 2px solid var(--fieldID);
   font-weight: 400;
   display: grid;
@@ -146,19 +147,17 @@ section {
   border: 2px solid var(--fieldPassword);
 }
 
-
 .wrapper-field p {
-  margin-top: 1.6rem;
-  padding-left: 8px;
-  font-weight: 700;
+  margin-top: 1.4rem;
+  font-weight: 600;
+  font-size: 17px;
   align-self: flex-start;
   color: var(--mainColor);
 }
 
-
 .id-icon,
 .password-icon {
-  width: 18px;
+  width: 22px;
   stroke: var(--mainColor)
 }
 
@@ -175,11 +174,12 @@ section {
 }
 
 .btn-logIn {
-  min-height: 2.6rem;
+  min-height: 48px;
   width: 100%;
-  margin-top: 1rem;
-  border-radius: 100px;
+  margin-top: 1.5rem;
+  border-radius: 10px;
   font-size: 16px;
+  font-weight: 500;
   border: none;
   outline: none;
   color: var(--bg);
@@ -207,7 +207,6 @@ section {
 
 /* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 .container-registerUser {
-  /* height: 100vh; */
   padding: 1.2rem 0;
   display: flex;
   align-items: center;
@@ -215,41 +214,18 @@ section {
 }
 
 .registerUser {
-  width: 20rem;
-  padding: 6px 1rem 18px 1rem;
+  width: 21rem;
+  padding: 2.3rem 1rem 18px 1rem;
   border-radius: 16px;
   display: flex;
   flex-direction: column;
-  place-items: center;
+  align-items: center;
+  justify-content: center;
   background-color: #fff;
   box-shadow: var(--shadowForms);
 }
 
-.btn-backLogin {
-  margin-top: 10px;
-  font-size: 16px;
-  display: flex;
-  font-weight: 500;
-  align-items: center;
-  align-self: flex-start;
-  border: none;
-  background: none;
-  color: var(--mainColor);
-}
-
-.btn-backLogin:hover {
-  cursor: pointer;
-  font-weight: 600;
-  color: #3c5c92;
-}
-
-.btn-backLogin__svg-Back {
-  width: 22px;
-  color: var(--mainColor);
-}
-
 .registerUser-h1 {
-  margin-top: 1rem;
   font-size: 26px;
   letter-spacing: -.8px;
 }
@@ -287,9 +263,9 @@ section {
 .registerUser-form-id,
 .registerUser-form-pass,
 .registerUser-form-passConfirm {
-  height: 42px;
+  height: 46px;
   width: 100%;
-  border-radius: 100px;
+  border-radius: 10px;
   padding: 4px 12px;
   font-size: 16px;
   font-weight: 400;
@@ -339,7 +315,7 @@ section {
   width: 46px;
   border: 2px solid var(--borderFieldPass);
   background-color: white;
-  border-radius: 50%;
+  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -377,22 +353,49 @@ section {
 }
 
 .btn-registerUser {
-  min-height: 2.5rem;
+  min-height: 48px;
   margin-top: 1rem;
-  border-radius: 100px;
+  border-radius: 10px;
   font-size: 16px;
   font-weight: 400;
   border: none;
   outline: none;
   color: var(--bg);
   background-color: #2e466f;
-  box-shadow: 0px 10px 10px -7px rgba(35, 57, 81, 0.2);
+  box-shadow: 0px 12px 8px -7px rgba(35, 57, 81, 0.2);
 }
 
 .btn-registerUser:hover {
   cursor: pointer;
   background-color: #2b4167;
-  box-shadow: 0px 10px 10px -7px rgba(35, 57, 81, 0.25);
+  box-shadow: 0px 12px 8px -7px rgba(35, 57, 81, 0.25);
+}
+
+.signUp-labelBBSI {
+  margin-top: 16px;
+  font-size: 15px;
+  justify-self: center;
+  display: flex;
+  gap: 4px;
+}
+
+.btn-backLogin {
+  padding: 0;
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  background: none;
+  color: var(--mainColor);
+}
+
+.btn-backLogin:hover {
+  cursor: pointer;
+  color: #3c5c92;
+}
+
+.btn-backLogin__svg-Back {
+  width: 22px;
+  color: var(--mainColor);
 }
 
 /* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
@@ -633,9 +636,9 @@ section {
   height: 87vh;
   display: flex;
   flex-direction: column;
-  place-content: center;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  /*user-select: none;*/
   color: var(--black18);
 }
 
@@ -650,7 +653,8 @@ section {
 }
 
 .whyHS-h1 {
-  font-size: 1.4rem;
+  text-align: center;
+  font-size: 1.8rem;
   text-align: center;
 }
 
@@ -665,24 +669,25 @@ section {
 
 
 .card-reasonWhy {
-  height: 11.2rem;
   width: 16rem;
-  padding: 1rem 9px;
+  padding: 1.4rem 18px;
   border-radius: 12px;
-  gap: 9px;
+  gap: 6px;
   border: 1px solid var(--borderCardsWhyHS);
   pointer-events: none;
-  text-align: center;
+  text-align: left;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   background-color: var(--bgCardsWhyHS);
 }
 
 .card-reasonWhy-svg {
-  color: var(--mainColor);
-  height: 28px;
+  height: 48px;
+  width: 48px;
+  padding: 12px;
+  border-radius: 300px;
+  color: white;
+  background-color: var(--mainColor);
 }
 
 .card-reasonWhy-h2 {
@@ -690,7 +695,6 @@ section {
 }
 
 .card-reasonWhy-p {
-  font-size: 16px;
   line-height: 1.5;
 }
 
@@ -806,6 +810,10 @@ footer {
 /* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 .hidden {
   display: none;
+}
+
+.colorBlue {
+  color: #2b5fbb;
 }
 
 .highlight-container,

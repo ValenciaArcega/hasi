@@ -45,8 +45,16 @@ const SignIn = ({ isRegistering, setIsRegistering }) => {
           <p>Contraseña</p>
           <div className="field-password">
             <IconPassword />
-            <input onBlur={blurFieldPass} onFocus={focusFieldPass} autoComplete="off" className="input-login-pass" type="password" name="field password" id="inputPassword"
-              placeholder="Ingresa tu contraseña" />
+            <input
+              id="inputPassword"
+              className="input-login-pass"
+              type="password"
+              autoComplete="off"
+              placeholder="Ingresa tu contraseña"
+              name="field password"
+              onBlur={blurFieldPass}
+              onFocus={focusFieldPass}
+            />
           </div>
 
           <button className="btn-logIn" type="submit">Ingresar</button>

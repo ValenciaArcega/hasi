@@ -1,4 +1,4 @@
-import { IconBack, IconText, IconShow, IconHide, IconHideConfirm, IconShowConfirm } from "../icons/RegisterUserIcons";
+import { IconText, IconShow, IconHide, IconHideConfirm, IconShowConfirm } from "../icons/RegisterUserIcons";
 import { inputNameKeyUp, inputNameFocusIn, inputNameBlur, inputNumberFocusIn, inputNumberBlur, inputPassFocusIn, inputPassBlur, showPassRegister, inputConfirmPassFocusIn, inputConfirmPassBlur, inputConfirmPassKeyUp, showConfirmRegister } from "../../functions/review-inputRegister";
 import reviewRegister from "../../functions/review-userRegistration";
 import firebaseApp from '../../credentials';
@@ -20,12 +20,8 @@ const SignUp = ({ isRegistering, setIsRegistering }) => {
     <section className="container-registerUser">
 
       <div className="registerUser">
-        <button onClick={() => { setIsRegistering(!isRegistering); }} className="btn-backLogin" type="button">
-          <IconBack />
-          Regresar
-        </button>
 
-        <h1 className="registerUser-h1">Crea una cuenta gratis</h1>
+        <h1 className="registerUser-h1">Crea una cuenta <span className="colorBlue">gratis</span></h1>
 
         <form className="registerUser-form" onSubmit={submitHandler}>
 
@@ -46,7 +42,14 @@ const SignUp = ({ isRegistering, setIsRegistering }) => {
             <h4 className="header-input-h4">Contraseña</h4>
           </div>
           <div className="wrapper-password">
-            <input onBlur={inputPassBlur} onFocus={inputPassFocusIn} autoComplete="new-password" type="password" className="registerUser-form-pass" placeholder="Crea una contraseña" id="inputPassword" />
+            <input
+              onBlur={inputPassBlur}
+              onFocus={inputPassFocusIn}
+              autoComplete="new-password"
+              type="password"
+              className="registerUser-form-pass"
+              placeholder="Crea una contraseña"
+              id="inputPassword" />
             <button onClick={showPassRegister} className="btn-showPass" type="button" title="button show">
               <IconShow />
               <IconHide />
@@ -65,7 +68,14 @@ const SignUp = ({ isRegistering, setIsRegistering }) => {
             <h4 className="header-input-h4">Confirmar contraseña</h4>
           </div>
           <div className="wrapper-password">
-            <input onKeyUp={inputConfirmPassKeyUp} onFocus={inputConfirmPassFocusIn} onBlur={inputConfirmPassBlur} autoComplete="new-password" type="password" className="registerUser-form-passConfirm" placeholder="Repite la contraseña" />
+            <input
+              onKeyUp={inputConfirmPassKeyUp}
+              onFocus={inputConfirmPassFocusIn}
+              onBlur={inputConfirmPassBlur}
+              autoComplete="new-password"
+              type="password"
+              className="registerUser-form-passConfirm"
+              placeholder="Repite la contraseña" />
             <button onClick={showConfirmRegister} className="btn-showPassConfirm" type="button" title="button show">
               <IconShowConfirm />
               <IconHideConfirm />
@@ -74,6 +84,18 @@ const SignUp = ({ isRegistering, setIsRegistering }) => {
           <p className="registerUser-form-passConfirm-p"></p>
 
           <button type="submit" onClick={reviewRegister} className="btn-registerUser" name="button to Register">Registrarme Ahora</button>
+
+          <label className="signUp-labelBBSI" htmlFor="btnBackSignIn">
+            ¿Ya tienes una cuenta?
+            <button
+              id="btnBackSignIn"
+              onClick={() => { setIsRegistering(!isRegistering); }}
+              className="btn-backLogin"
+              type="button"
+            >Inicia Sesión
+            </button>
+          </label>
+
         </form>
 
       </div>
