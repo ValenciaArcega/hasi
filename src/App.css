@@ -1,93 +1,4 @@
-/* 
- * { by : valencia.arcega }
- * icons by:  heroicons.com, ionic.io
- * illustrations by: undraw.co
-*/
-
-/* Normal */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
-
-/* Italic */
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
-
-/*
-* SPACING SYSTEM (px): 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
-
-* FONT SIZE SYSTEM (px): 10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98 
-*/
-
-:root {
-  --mainColor: #2e466f;
-  --mainColor-tint: #43597d;
-  --mainColor-shade: #293f64;
-  --bg: #f2f2f7;
-  --black18: #181818;
-  --ff: #fff;
-
-  --fieldID: #d1d1d1;
-  --fieldPassword: #d1d1d1;
-
-  /* Register section */
-  --borderFieldName: #a1a1a1;
-  --borderFieldID: #a1a1a1;
-  --borderFieldPass: #a1a1a1;
-  --borderFieldPassConfirm: #a1a1a1;
-
-  /* Blur buttons */
-  --blurSwitch: rgba(255, 255, 255, 0.2);
-  --blurSwitchBorder: rgba(0, 0, 0, .6);
-  /* Gradients */
-  --gradient-primary: linear-gradient(to top left, #2e466f, #8eafe8);
-  /* --gradient-primary: linear-gradient(to top left, #39b385, #9be15d); */
-
-  --borderCardsWhyHS: #c1c1c1;
-  --bgCardsWhyHS: #fff;
-
-  --bgPost: #fff;
-
-  --shadowForms: 0px 4px 20px -5px rgba(54, 100, 193, 0.15);
-}
-
-::selection {
-  color: var(--bg);
-  background-color: #2e466f;
-}
-
-::-moz-selection {
-  color: var(--bg);
-  background-color: #2e466f;
-}
-
-* {
-  margin: 0 0;
-  box-sizing: border-box;
-}
-
-html {
-  overflow-x: hidden;
-}
-
-body {
-  overflow-x: hidden;
-  font-family: 'Inter', sans-serif;
-  color: var(--black18);
-  background-color: var(--bg);
-}
-
-button,
-input {
-  font-family: 'Inter', sans-serif;
-  caret-color: red;
-}
-
-input[type="checkbox"] {
-  accent-color: red;
-}
-
-section {
-  background-color: var(--bg);
-}
+@import '../main.css';
 
 /* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 .container-login {
@@ -111,7 +22,7 @@ section {
   flex-direction: column;
   place-items: center;
   background-color: #fff;
-  box-shadow: var(--shadowForms);
+  box-shadow: 0px 8px 4px -5px rgba(54, 100, 193, 0.25);
 }
 
 .login-title-h1 {
@@ -222,7 +133,7 @@ section {
   align-items: center;
   justify-content: center;
   background-color: #fff;
-  box-shadow: var(--shadowForms);
+  box-shadow: 0px 8px 4px -5px rgba(54, 100, 193, 0.25);
 }
 
 .registerUser-h1 {
@@ -806,63 +717,6 @@ footer {
 .finder {
   margin-top: 5rem;
 }
-
-/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
-.hidden {
-  display: none;
-}
-
-.colorBlue {
-  color: #2b5fbb;
-}
-
-.highlight-container,
-.highlight {
-  position: relative;
-}
-
-.highlight-container {
-  display: inline-block;
-}
-
-.highlight-container:before {
-  content: " ";
-  height: 100%;
-  width: 110%;
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform: scale(1.07, 1.05) skewX(-15deg);
-  background: var(--gradient-primary);
-}
-
-
-.highlightBubble-container,
-.highlightBubble {
-  position: relative;
-}
-
-.highlightBubble-container {
-  display: inline-block;
-}
-
-.highlightBubble-container:before {
-  content: " ";
-  width: 100%;
-  display: block;
-  position: absolute;
-  margin-left: -3px;
-  top: -1px;
-  left: -1px;
-  height: 90%;
-  margin-right: -3px;
-  transform: rotate(2deg);
-  border-radius: 20% 25% 20% 24%;
-  padding: 10px 3px 3px 10px;
-  background: var(--gradient-primary);
-}
-
 
 
 

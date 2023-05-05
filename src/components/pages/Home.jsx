@@ -1,9 +1,9 @@
-import NavBarDesktop from "../navegation/NavBarDesktop";
-import NavBarMobile from "../navegation/NavBarMobile";
-import Appearance from "../buttons/Appearance";
-import Dashboard from "./Dashboard";
-import Profile from "./Profile";
-import Search from "./Search";
+import NavBarDesktop from "../interface/NavBarDesktop";
+import NavBarMobile from "../interface/NavBarMobile";
+import Appearance from "../theme/Appearance";
+import Dashboard from "../views/Dashboard";
+import Profile from "../views/Profile";
+import Search from "../views/Search";
 import { Route, Routes } from 'react-router-dom';
 import { useEffect } from "react";
 
